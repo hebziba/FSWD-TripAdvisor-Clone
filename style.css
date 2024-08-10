@@ -47,6 +47,16 @@ body{
     align-items: center;
     gap: 20px;
     font-size: 20px;
+    transition: 1s;
+}
+
+.navbar-s2 p:hover{
+    cursor: pointer;
+    /* border: 1px solid #30cc89; */
+    border-radius: 20px;
+    background-color: #30cc89;
+    padding: 10px;
+    transition: 1s;
 }
 
 .navbar-s3{
@@ -196,14 +206,14 @@ body{
 
 .trip-content h1{
     font-size: 50px;
-    margin-bottom: 10px;
+    padding-bottom: 10px;
     /* padding-left: 50px; */
     font-weight: bold;
 }
 
 .trip-content p{
     font-size: 20px;
-    margin-bottom: 10px;
+    padding-bottom: 10px;
     font-weight: 500px;
 }
 
@@ -426,7 +436,7 @@ body{
  /* Media Query */
 
   /* Mobile Devices (Portrait) */
-@media (max-width: 768px) {
+ @media (max-width: 768px) {
      /* Navbar */
      .navbar {
         padding-left: 5%;
@@ -449,8 +459,33 @@ body{
         font-weight: 800;
      }
 
-      
-
+     .searchitems{
+        background-color: white;
+        padding-top: 30px;
+        padding-left: 10%;
+        padding-right: 50px;
+        text-align: center;
+    }
+    
+    .searchitems-s1__title{
+        font-size: 47px;
+        padding-bottom: 40px;
+        /* padding-left: 50px; */
+        font-weight: bold;
+    }
+    
+    .searchitems-s2{
+        flex-direction: row;
+        justify-content:center; 
+    }
+    
+     
+    
+    .searchitems-s3{
+        width: 100%;
+        margin: 0;
+    }
+    
      .navbar-s4 button{
         margin-right: 10px;
      }
@@ -481,45 +516,35 @@ body{
 
     .trip-content {
         width: 50%;
-        margin: 20px 0;
+        margin: 0;
         position: absolute;
         top: 20px;
         left: 20px;
+        bottom: 10px;
     }
 
     .trip-content h1{
         font-size: 25px;
-        margin-bottom: 10px;
+        /* padding-bottom: 5px; */
         font-weight: bold;
     }
 
     .trip-content p{
-        font-size: 16px;
-        margin-bottom: 10px;
-        font-weight: 500px;
+       display: none;
     }
 
     .trip-content__mainbtn{
-        border: none;
-        background-color:  #301D49;
-        color: white;
-        padding: 10px;
-        width: 120px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        border-radius: 30px;
-        gap: 5px;
-        font-weight: bold;
         font-size: 10px;
+        padding: 5px;
+        width: 120px;
+         
     }
     
 
      
     /* Adventure Section */
     .adventure,.experience {
-        padding-left: 10px;
-        padding-right: 10px;
+        padding: 0;
         margin: 30px 0px;
     }
 
@@ -534,9 +559,10 @@ body{
     }
 
     .adventure-container,.experience-container {
-        padding: 10px;
-        flex-wrap: wrap;
-        gap: 48px;
+         display: flex;
+         justify-content: center;
+         flex-wrap: wrap;
+         gap: 50px;
     }
 
     .adventure-card,.experience-card{
@@ -567,6 +593,11 @@ body{
     .explore-card {
         width: 100%;
         margin-bottom: 20px;
+    }
+
+    .explore-card svg{
+        top: 18px;
+        left: 88%;
     }
 
     .explore-card img {
@@ -628,4 +659,176 @@ body{
         display: none;
     }
      
+} 
+
+@media screen and (max-width:550px){
+    .trip-content {
+        width: 50%;
+        margin: 0;
+        position: absolute;
+        top: 10px;
+        left: 30px;
+    }
+
+    .trip-content h1{
+        font-size: 25px;
+        /* padding-bottom: 10px; */
+    }
+
+     
+
+    .searchitems-s2{
+        flex-direction: row;
+        justify-content:center; 
+        gap: 20px;
+        font-size: 16px;
+    }
+
+    .searchitems-s1__title{
+        font-size: 40px;
+       
+    }
+
+    .searchitems-s3{
+        width: 110%;
+        margin: 0;
+    }
+    .explore-card svg{
+        top: 18px;
+        left: 88%;
+    }
+
+    .adventure-container,.experience-container{
+        display:flex;
+        justify-content: center;
+        gap: 30px;
+    }
+
+
+
+    .adventure-card,.experience-card{
+        width: 200px;
+    }
+
+    .adventure-card img,.experience-card img{
+        width: 200px;
+    }
+    
 }
+
+@media screen and (max-width:468px) {
+    .searchitems-s1__title{
+        font-size: 40px;
+        padding: 0;
+        
+    }
+
+    .explore-card svg{
+        top: 18px;
+        left: 88%;
+    }
+
+    .searchitems-s2{
+        flex-direction: row;
+        justify-content:center; 
+        gap: 15px;
+        font-size: 13px;
+    }
+
+    .adventure-container,.experience-container{
+        
+        gap: 20px;
+    }
+
+    .adventure-card,.experience-card{
+        width: 180px;
+    }
+
+    .adventure-card img,.experience-card img{
+        width: 180px;
+    }
+    
+}
+
+@media screen and (max-width:427px) {
+    .searchitems-s1__title{
+        font-size: 36px;
+        padding: 0;
+        
+    }
+
+    .searchitems-s2{
+        flex-direction: row;
+        justify-content:center; 
+        gap: 16px;
+        font-size: 14px;
+    }
+
+    .searchitems-s3__btn{
+        width: 110%;
+        margin: 0;
+    }
+
+    .adventure-container,.experience-container{
+        
+        gap: 20px;
+    }
+
+    .adventure-card,.experience-card{
+        width: 150px;
+    }
+
+    .adventure-card img,.experience-card img{
+        width: 150px;
+    }
+    
+}
+
+@media screen and (max-width:394px) {
+    .searchitems-s1__title{
+        font-size: 34px;
+        padding: 0;
+        
+    }
+
+    .searchitems-s2{
+        gap: 16px;
+        font-size: 12px;
+    }
+    
+}
+
+@media screen and (max-width:378px) {
+    .searchitems-s1__title{
+        font-size: 32px;
+        padding: 0;
+        
+    }
+     
+    .navbar-s4{
+        display: flex;
+        align-items: center;
+    }
+
+    .navbar-s1{
+        font-size: 15px;
+    } 
+    
+}
+
+@media screen and (max-width:360px) {
+    .searchitems-s1__title{
+        font-size: 30px;
+        padding: 0;
+        
+    }
+
+    .searchitems-s2{
+        gap: 14px;
+        font-size: 10px;
+    }
+}
+
+ 
+
+ 
