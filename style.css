@@ -24,6 +24,7 @@ body{
     position: sticky;
     top: 0;
     z-index: 1;
+     
 }
 
 .navbar-s0,.navbar-s4{
@@ -45,18 +46,15 @@ body{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 20px;
+    gap: 30px;
     font-size: 20px;
     transition: 1s;
 }
 
 .navbar-s2 p:hover{
     cursor: pointer;
-    /* border: 1px solid #30cc89; */
-    border-radius: 20px;
-    background-color: #30cc89;
-    padding: 10px;
-    transition: 1s;
+    transform: scale(1.10); /* Slightly increases the size */
+    transition: all 1s ease;
 }
 
 .navbar-s3{
@@ -100,13 +98,17 @@ body{
     align-items: center;
     gap: 20px;
     font-size: 18px;
-    padding-bottom: 20px;
-    
+}
+
+.searchitems-s2 p{
+    padding-bottom:10px;
 }
 
 .searchitems-s2 p:hover{
-    border-bottom: 3px solid black;
-    /* transition: 2s; */
+    cursor: pointer;
+    text-decoration: underline; /* Underlines the link on hover */
+    color: #30cc89;
+    transition: color 0.3s ease; 
 }
 
 .searchitems-s3{
@@ -148,6 +150,15 @@ body{
  width: 90px;
  font-weight: bold;
 
+}
+
+.adventure-card img:hover,
+.experience-card img:hover,
+.explore-card img:hover,
+.final-img img:hover {
+    opacity: 0.8; /* Makes the image slightly transparent */
+    transform: scale(1.02); /* Slightly zooms in the image */
+    transition: all 1s ease; /* Smooth transition */
 }
 
 .trip-img{
